@@ -16,7 +16,8 @@ class CreateComparisonsTable extends Migration
             $table->bigIncrements('id');
             $table->string('string1');
             $table->string('string2');
-            $table->double('result');
+            $table->integer('matching_chars');
+            $table->double('match_percentage');
             $table->timestamps();
         });
     }

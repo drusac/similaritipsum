@@ -42,8 +42,8 @@ class ComparisonCrudController extends CrudController
         // CRUD::column('id');
         CRUD::column('string1');
         CRUD::column('string2');
-        CRUD::column('result');
-        CRUD::column('created_at');
+        CRUD::column('matching_chars');
+        CRUD::column('match_percentage');
         // CRUD::column('updated_at');
 
         /**
@@ -64,9 +64,10 @@ class ComparisonCrudController extends CrudController
         CRUD::setValidation(ComparisonRequest::class);
 
         // CRUD::field('id');
-        CRUD::field('string1');
-        CRUD::field('string2');
-        CRUD::field('result');
+        // CRUD::field('string1');
+        // CRUD::field('string2');
+        // CRUD::field('matching_chars');
+        // CRUD::field('match_percentage');
         // CRUD::field('created_at');
         // CRUD::field('updated_at');
 
