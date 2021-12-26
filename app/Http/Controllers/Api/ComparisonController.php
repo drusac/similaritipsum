@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Comparison;
 use App\Services\BaconIpsumHandler;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\GetComparison;
+use App\Http\Resources\ComparisonResource;
 
 class ComparisonController extends Controller
 {
+    public function index()
+    {
+        return ComparisonResource::collection(Comparison::latest()->paginate());
+    }
+
     public function similarText(GetComparison $request)
     {
         $baconIpsumHandler = new BaconIpsumHandler;

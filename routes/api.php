@@ -23,5 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix('comparisons')->group(function () {
     $c = ComparisonController::class;
 
+    Route::get('', [$c, 'index']);
     Route::get('similar-text', [$c, 'similarText']);
 });

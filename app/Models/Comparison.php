@@ -9,6 +9,8 @@ class Comparison extends Model
 {
     use CrudTrait;
 
+    protected $perPage = 10;
+
     /*
     |--------------------------------------------------------------------------
     | GLOBAL VARIABLES
