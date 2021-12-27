@@ -23,6 +23,17 @@ class ComparisonTest extends TestCase
 
         $this->assertIsString($baconString);
     }
+    
+    public function test_bacon_ipsum_handler_get_strings()
+    {
+        $baconIpsumHandler = new BaconIpsumHandler;
+        $baconStrings = $baconIpsumHandler->getBaconStrings(3);
+
+        $this->assertIsArray($baconStrings);
+        $this->assertIsString($baconStrings[0]);
+        $this->assertIsString($baconStrings[1]);
+        $this->assertIsString($baconStrings[2]);
+    }
 
     public function test_compare_two_fetched_strings_and_check_results()
     {
