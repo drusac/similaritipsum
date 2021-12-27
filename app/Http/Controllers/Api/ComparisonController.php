@@ -36,11 +36,13 @@ class ComparisonController extends Controller
         }
 
         return response()->json([
-            'bacon_string_1' => $baconString1,
-            'bacon_string_2' => $baconString2,
-            'matching_chars' => $matchingChars,
-            'percentage' => round($percentage, 2),
-            'saved_result_to_db' => $savedToDb ?? false,
+            'data' => [
+                'bacon_string_1' => $baconString1,
+                'bacon_string_2' => $baconString2,
+                'matching_chars' => $matchingChars,
+                'percentage' => round($percentage, 2),
+                'saved_result_to_db' => $savedToDb ?? false,
+            ]
         ]);
     }
 }
