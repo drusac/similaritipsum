@@ -30,14 +30,16 @@ class BaconIpsumHandler extends BaseApiHandler
 		return $this->returnResponse($data)[0];
 	}
 
-	public function getBaconStrings(?int $numberOfStrings = 2): array
+	public function getBaconStrings(?int $numberOfSentences = 2): array
 	{
 		$data = $this->client->get('', [
 			'type' => 'meat-and-filler',
-			'sentences' => $numberOfStrings,
+			'sentences' => $numberOfSentences,
 		]);
 
-		return $this->returnResponse($data);
+		$sentences = $this->returnResponse($data);
+
+		return explode('.', $sentences[0], -1);
 	}
 
 	public function persistResultToDatabase(array $comparisonData)

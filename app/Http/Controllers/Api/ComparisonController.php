@@ -19,8 +19,13 @@ class ComparisonController extends Controller
     {
         $baconIpsumHandler = new BaconIpsumHandler;
 
-        $baconString1 = $baconIpsumHandler->getBaconString();
-        $baconString2 = $baconIpsumHandler->getBaconString();
+        // $baconString1 = $baconIpsumHandler->getBaconString();
+        // $baconString2 = $baconIpsumHandler->getBaconString();
+
+        $baconStrings = $baconIpsumHandler->getBaconStrings();
+        
+        $baconString1 = $baconStrings[0];
+        $baconString2 = $baconStrings[1];
 
         $matchingChars = similar_text($baconString1, $baconString2, $percentage);
 
