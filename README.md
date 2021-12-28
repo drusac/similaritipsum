@@ -12,7 +12,7 @@ Open Windows Terminal and use it with Ubuntu 20.04. Navigate to home folder with
 cd
 ```
 
-To avoid performance issues, clone GitHub project to your Ubuntu 20.04 home folder (NOT into you Windows filesystem):
+To avoid performance issues, clone GitHub project to your Ubuntu 20.04 home folder (NOT into your Windows filesystem):
 
 ```bash
 git clone https://github.com/drusac/similaritipsum.git
