@@ -6,7 +6,12 @@ Prerequisites:
 - Have WSL2 installed and enabled, [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install)
 - Have properly configured Docker [Desktop WSL 2 backend](https://docs.docker.com/desktop/windows/wsl/)
 
-Open Windows Terminal and use it with Ubuntu 20.04. Navigate to home folder with:
+The most easiest way to run project would be to contact me and ask for "sail share". Then I would expose my Laravel app and you could test without the need of local installation.
+Just switch Insomnia to production environment and you are ready to go.
+
+If you want to install it locally on you machine, please proceed.
+
+Open Windows Terminal and use it with Ubuntu 20.04. Navigate to home folder using:
 
 ```bash
 cd
